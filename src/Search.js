@@ -4,14 +4,11 @@ class Search extends React.Component {
     render() {
       return (
         <form>
-          <div>
-            <input
-              value={this.state.input}
-              onChange={this.handleChange} />
-            <button onClick={this.Search}>Search</button>
-            <h1>{this.state.submit}</h1>
-            </div>
+          <input type="text" placeholder="Enter a search term" />
+          <button type="submit">Search</button>
         </form>
       );
     }
   }
+
+  export default Search;

@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
-import WikiArticleRow from './WikiArticleRow';
+import Search from './Search';
+import WikiSearchResults from './WikiSearchResults';
 
 class WikiSearchTable extends React.Component {
     render() {
-      const rows = [];
-      
-      this.props.articles.forEach((article) => {      
-        rows.push(
-          <WikiArticleRow
-            article={article}
-            key={article.title} />
-        );
-      });
-  
-      return (
-        <ul>{rows}</ul>
-      );
-    }
-  }
+        return (
+            <div>
+                <Search />
+                <WikiSearchResults articles={this.props.articles} />
+            </div>
 
-  export default WikiSearchTable;
+        );
+    }
+}
+
+export default WikiSearchTable;
