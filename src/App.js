@@ -31,11 +31,18 @@ class App extends Component {
   }
 
   wikiSearch = (searchTerm) => {
-    $.getJSON('https://en.wikipedia.org/w/api.php?action=opensearch&search=' + searchTerm + '&limit=10&namespace=0&format=json')
-    .then((data) => {
-      this.setState({articles: data});
-      console.log(this.state.articles);
-    });
+    if (searchTerm) {
+      $.getJSON('https://en.wikipedia.org/w/api.php?action=opensearch&search=' + searchTerm + '&limit=10&namespace=0&format=json')
+      .then((data) => {
+        this.setState({articles: data});
+        console.log(this.state.articles);
+      }, (error) => {
+        console.log("Search error: " + error);
+      });
+    }
+    else {
+      this.setState({articles: []});
+    }
   }
 }
 

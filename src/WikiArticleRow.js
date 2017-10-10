@@ -7,15 +7,20 @@ class WikiArticleRow extends React.Component {
       const description = this.props.description;
       const url = this.props.url;
 
-      return (
-        <a href={url}>
-        <li>
-          <h1>{title}</h1>
-          <p>{description}</p>
-          <p>{url}</p>
-        </li>
-        </a>
-      );
+      if (title) {
+        return (
+          <a href={url}>
+          <li>
+            <h1>{title}</h1>
+            <p>{description}</p>
+            <p>{url}</p>
+          </li>
+          </a>
+        );
+        }
+      else {
+        return;
+      }
     }
   }
 

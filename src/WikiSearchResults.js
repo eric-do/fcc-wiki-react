@@ -11,10 +11,10 @@ class WikiSearchResults extends React.Component {
     var urlAry = this.props.articles[3];
 
     console.log("Articles: " + nameAry);
+    console.log(typeof nameAry === 'undefined');
 
-    if (this.props.articles[0] != 'undefined') {
-      for (var i = 0; i < this.props.articles.length; i++) {
-        //console.log("My name is: " + nameAry[i]);
+    if (nameAry) {
+      for (var i = 0; i < nameAry.length; i++) {
         rows.push(
           <WikiArticleRow
             name = { nameAry[i] }
