@@ -11,8 +11,6 @@ ul li {
   margin-bottom: 10px;
   padding: 15px 30px 5px 30px;
   background-color: #E7E7E8;
-  
- 
 }
 
 form input {
@@ -25,4 +23,9 @@ form input {
   background-color: white;
   color: black;
  
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

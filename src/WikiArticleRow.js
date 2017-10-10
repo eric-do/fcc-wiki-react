@@ -8,11 +8,13 @@ class WikiArticleRow extends React.Component {
       const url = this.props.url;
 
       return (
+        <a href={url}>
         <li>
           <h1>{title}</h1>
           <p>{description}</p>
           <p>{url}</p>
         </li>
+        </a>
       );
     }
   }

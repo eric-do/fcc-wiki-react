@@ -45,7 +45,7 @@ class Search extends React.Component {
         <button 
           type="button" 
           onClick={this.handleSubmit}>Search</button>
-        <h1>{this.state.submit}</h1>
+        
       </form>
     );
   }

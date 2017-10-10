@@ -32,8 +32,6 @@ class App extends Component {
 
   wikiSearch = (searchTerm) => {
     $.getJSON('https://en.wikipedia.org/w/api.php?action=opensearch&search=' + searchTerm + '&limit=10&namespace=0&format=json')
-    //$.getJSON('https://en.wikipedia.org/w/api.php?action=opensearch&search=Netflix&limit=10&namespace=0&format=json')
-    //.then(({ results }) => this.setState({ articles: results }));
     .then((data) => {
       this.setState({articles: data});
       console.log(this.state.articles);
