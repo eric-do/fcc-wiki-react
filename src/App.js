@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
-import WikiSearchTable from './WikiSearchTable';
+//import WikiSearchTable from './WikiSearchTable';
 import $ from 'jquery';
 import Search from './Search';
 import WikiSearchResults from './WikiSearchResults';

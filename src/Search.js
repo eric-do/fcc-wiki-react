@@ -39,6 +39,7 @@ class Search extends React.Component {
           value={this.state.input}
           ref="searchTerm"
           onChange={this.handleChange}
+          onSubmit={this.handleSubmit}
           placeholder="Enter a search term" 
           />
         <button 
