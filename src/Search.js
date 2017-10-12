@@ -14,27 +14,25 @@ class Search extends React.Component {
   }
 
   handleChange = (event) => {
-    //console.log("I'm handling a change and setting value to: " + event.target.value);
+    console.log("Change was handled");
     this.setState({
       input: event.target.value
     });
   }
 
-  handleSubmit = () => {
-    
-
+  handleSubmit = (e) => {
+    e.preventDefault();
     this.setState({
       submit: this.state.input
     });
 
    // var query = ReactDOM.findDOMNode(this.refs.query).value;
     this.props.search(this.state.input);
-
   }
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input 
           value={this.state.input}
           ref="searchTerm"
@@ -43,8 +41,7 @@ class Search extends React.Component {
           placeholder="Enter a search term" 
           />
         <button 
-          type="button" 
-          onClick={this.handleSubmit}>Search</button>
+          type="submit">Search</button>
         
       </form>
     );
