@@ -30,20 +30,28 @@ class Search extends React.Component {
     this.props.search(this.state.input);
   }
 
+  wikiRandom = () => {
+    window.location = 'https://en.wikipedia.org/wiki/Special:Random';
+  }
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input 
-          value={this.state.input}
-          ref="searchTerm"
-          onChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-          placeholder="Enter a search term" 
-          />
-        <button 
-          type="submit">Search</button>
-        
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input 
+            value={this.state.input}
+            ref="searchTerm"
+            onChange={this.handleChange}
+            onSubmit={this.handleSubmit}
+            placeholder="Enter a search term" 
+            />
+          <input value="Search" readOnly={true} type="Submit"/> 
+        </form>
+        <a href='https://en.wikipedia.org/wiki/Special:Random'>
+          <button>Lucky
+          </button>
+        </a>
+      </div>
     );
   }
 }

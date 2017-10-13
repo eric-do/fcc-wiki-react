@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.wikiSearch();
+   // this.wikiSearch();
   }
 
   wikiSearch = (searchTerm) => {
