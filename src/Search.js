@@ -14,7 +14,6 @@ class Search extends React.Component {
   }
 
   handleChange = (event) => {
-    console.log("Change was handled");
     this.setState({
       input: event.target.value
     });

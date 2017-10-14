@@ -14,16 +14,23 @@ class WikiSearchResults extends React.Component {
     console.log(typeof nameAry === 'undefined');
 
     if (nameAry) {
-      for (var i = 0; i < nameAry.length; i++) {
-        rows.push(
-          <WikiArticleRow
-            name = { nameAry[i] }
-            description = { descriptionAry[i]}
-            url = { urlAry[i] }
-            key = { urlAry[i] }
-            />
-        )
+      if (nameAry.length === 0) {
+        return (
+          <center><h1>No results found.</h1></center>
+        );
       }
+      else {
+        for (var i = 0; i < nameAry.length; i++) {
+          rows.push(
+            <WikiArticleRow
+              name = { nameAry[i] }
+              description = { descriptionAry[i]}
+              url = { urlAry[i] }
+              key = { urlAry[i] }
+              />
+          )
+        }
+    }
     }
 
     return (

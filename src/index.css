@@ -58,6 +58,10 @@ a {
   color: #757575;
   margin: 10px 10px 10px 10px;
   font-weight: 700;
+  padding: 0 16px 0 16px;
+  font-size: 13px;
+  text-align: center;
+  
 }
 
 .submit-btn:hover {
