@@ -38,20 +38,20 @@ class Search extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input 
-            value={this.state.input}
-            ref="searchTerm"
-            onChange={this.handleChange}
-            onSubmit={this.handleSubmit}
-            placeholder="Enter a search term" 
-            />
-          <input value="Search" readOnly={true} type="Submit"/> 
+          <center>
+            <input 
+              value={this.state.input}
+              ref="searchTerm"
+              onChange={this.handleChange}
+              placeholder="Enter a search term" 
+              />
+            <div>
+              <input class="submit-btn" value="Search" readOnly={true} type="Submit"/> 
+              <a href='https://en.wikipedia.org/wiki/Special:Random'><input class="submit-btn" value="Random" readOnly={true} type="button"/> </a>
+            </div>
+          </center>
         </form>
-        <a href='https://en.wikipedia.org/wiki/Special:Random'>
-          <button>Lucky
-          </button>
-        </a>
-      </div>
+       </div>
     );
   }
 }
